@@ -1,0 +1,27 @@
+{
+  "name": "typescript-concrete-optics",
+  "version": "0.0.1",
+  "description": "Very basic concrete optics in typescript",
+  "main": "index.js",
+  "repository": "https://github.com/lagunoff/typescript-concrete-optics.git",
+  "author": "Vladislav Lagunov",
+  "license": "MIT",
+  "scripts": {
+    "clean": "rm -rf lib/*",
+    "build": "rm -rf lib/* && tsc --outDir lib -d && cp package.json ./lib",
+    "publish": "cd ./lib && npm publish",
+    "doctest": "TS_NODE_TRANSPILE_ONLY=true ts-node scripts/doctest.ts",
+    "test": "TS_NODE_TRANSPILE_ONLY=true mocha tests/*.ts -r ts-node/register"
+  },
+  "devDependencies": {
+    "@types/mocha": "^5.2.7",
+    "chai": "^4.2.0",
+    "jsdom": "^15.1.1",
+    "jsdom-global": "^3.0.2",
+    "lodash": "^4.17.11",
+    "mocha": "5.2.0",
+    "ts-node": "^8.2.0",
+    "tsutils": "^3.12.0",
+    "typescript": "^3.5.1"
+  }
+}
